@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+
+{% include head.html %}
+
+<body id="page-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-sm-push-3">
+        {{content}}
+      </div>
+      <div class="col-sm-3 col-sm-pull-9">
+        <h3>Sponsoren</h3>
+        Wir danken unseren Sponsoren
+        {% for sponsor in site.sponsors | sort: 'name' %}
+        <a href="{{sponsor.url | prepend: site.baseurl | prepend: site.url}}">
+          <img src="{{site.url}}{{site.baseurl}}/img/sponsors/{{sponsor.logo}}" class="img-responsive"></a>
+          <br/>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

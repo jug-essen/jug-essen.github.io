@@ -1,0 +1,34 @@
+---
+layout: blog
+path: /blog/index.html
+---
+<h2>Aktuelle Blog Einträge</h2>
+<div class="home">
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta">{% include date.html date=post.date %}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        {{ post.excerpt }}
+        <br/>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<nav id="pagination">
+  <ul class="pagination clearfix">
+    {% if paginator.next_page %}
+      <li class="prev"><a href="{{ paginator.next_page_path }}" title="Ältere Beiträge">← Ältere Beiträge</a></li>
+    {% endif %}
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <li class="next"><a href="/" title="Neuere Beiträge">Neuere Beiträge →</a></li>
+      {% else %}
+        <li class="next"><a href="{{ paginator.previous_page_path }}" title="Neuere Beiträge">Neuere Beiträge →</a></li>
+      {% endif %}
+    {% endif %}
+  </ul>
+</nav>

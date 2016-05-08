@@ -1,0 +1,57 @@
+# Site settings
+title: JUG Essen
+email: team@juge.de
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+twitter_username: juge
+github_username: juge
+
+# Build settings
+markdown: kramdown
+
+# Permanent Links
+permalink: /blog/:year/:month/:day/:title
+
+# Pagination
+paginate: 5
+gems: [jekyll-paginate]
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  authors:
+    output: true
+    permalink: /authors/:path/
+  sponsors:
+    output: true
+    permalink: /sponsors/:path/
+  events:
+    output: true
+    permalink: /events/:path/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "sponsors"
+    values:
+      layout: "sponsor"
+  -
+    scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author_profile"

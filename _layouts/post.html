@@ -1,0 +1,45 @@
+---
+layout: blog
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include date.html date=page.date %}</time>
+       • <span itemprop="keywords">
+        {% for category in page.categories %}
+          {% assign topic = false %}
+          {% for temp_topic in site.topics %}
+            {% if temp_topic.category == category %}
+              {% assign topic = temp_topic %}
+            {% endif %}
+          {% endfor %}
+          {% if topic %}
+            <a href="/categories/{{ topic.category }}" title="Artikel zum Thema {{ topic.title }}">{{ topic.title }}</a>
+          {% else %}
+            {{ category | capitalize }}
+          {% endif %}
+          {% unless category == page.categories.last %}, {% endunless %}
+        {% endfor %}
+      </span>
+      {% if page.author %}
+        {% for author in site.authors %}
+          {% if author.username == page.author %}
+            {% assign current_author = author %}
+          {% endif %}
+        {% endfor %}
+        {% if current_author %}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ "/authors/" | prepend: site.baseurl | append: current_author.username }}">{{ current_author.title }}</a></span></span>
+        {% else %}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+        {% endif %}
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>
