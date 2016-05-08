@@ -1,0 +1,29 @@
+<section id="neuigkeiten">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Neuigkeiten</h2>
+              <hr class="primary">
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          {% for post in site.posts limit:3  %}
+            <li>
+              <span class="post-meta">{% include date.html date=post.date %}</span>
+              <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title  }}</a>
+              </h2>
+              {{ post.content }}
+              <br/>
+            </li>
+            {% endfor %}
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12 text-center">
+            <a href="{{"/blog" | prepend: site.baseurl }}" class="btn btn-primary btn-xl">Mehr...</a>
+          </div>
+      </div>
+  </div>
+</section>
