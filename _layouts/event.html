@@ -6,5 +6,20 @@ layout: default
     <div class="col-md-12">
       <h2>Vortrag: {{page.title}} ({% include date.html date=page.date %})</h2>
       {{content}}
+    </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Sprecher</h2>
+    </div>
+  </div>
+  {% for author in site.authors %}
+    {% for speaker in page.speakers %}
+      {% if author.username == speaker %}
+        {% include author_bio.html author=author %}<br/>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% if current_author %}
+  {% endif %}
 </div>

@@ -18,5 +18,5 @@ topics:
   - Software Craftsmanship
 ---
 
-Richard Attermeyer ist Senior Solution Architect bei der OPITZ CONSULTING Deutschland GmbH. Er beschäftigt sich seit mehreren Jahren mit der Architektur und Implementierung von Anwendungen im agilen Umfeld. Er konzentriert sich dabei aktuell sowohl auf die methodischen, organisatorischen und
+**Richard Attermeyer** ist Senior Solution Architect bei der OPITZ CONSULTING Deutschland GmbH. Er beschäftigt sich seit mehreren Jahren mit der Architektur und Implementierung von Anwendungen im agilen Umfeld. Er konzentriert sich dabei aktuell sowohl auf die methodischen, organisatorischen und
 technologischen Herausforderungen im Bereich Continuous Delivery und DevOps.

@@ -4,32 +4,53 @@ layout: default
   <article class="author">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-          <header class="post-header">
-            {% if page.picture %}<div class="author-picture"><img src="/img/authors/{{ page.picture   }}"></div>{% endif %}
-            <h1 class="post-title">{{ page.title }}</h1>
-          </header>
+      <div class="col-md-12 text-center">
+        <h2>Sprecher- / Autorenprofil</h2>
       </div>
-      <div class="col-md-9">
-        <div class="row">
-          <div class="col-md-12">
-            {{ content }}
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12"
-              {% if page.website %}
-              <ul class="unstyled">
-                {% if page.email %}
-                <li><i class="fa fa-envelope"></i> <a href="mailto:{{ page.email }}">{{ page.email  }}</a></li>
-                {% endif %}
-                {% if page.website %}
-                <li><i class="fa fa-user"></i> <a href="{{ page.website }}">{{ page.website | remove:   "http://" }}</a></li>
-                {% endif %}
-              </ul>
+    </div>
+    {% include author_bio.html author=page %}
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <h3>Vorträge / Events</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <ul>
+          {% assign event_available = false %}
+          {% for event in site.events %}
+            {% for speaker in event.speakers %}
+              {% if speaker == author.username %}
+                {% assign event_available = true %}
+                <li><a href="{{ event.url | prepend: site.baseurl }}">{{ event.title }}</a> {% include date.html date=event.date %}</li>
               {% endif %}
-          </div>
-        </div>
+            {% endfor %}
+          {% endfor %}
+          {% if event_available == false %}
+            <li>Keine Events vorhanden</li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <h3>Blogbeiträge</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <ul>
+          {% assign post_available = false %}
+          {% for post in site.posts %}
+            {% if post.author == author.username %}
+              {% assign post_available = true %}
+              <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> {% include date.html date=post.date %}</li>
+            {% endif %}
+          {% endfor %}
+          {% if post_available == false %}
+            <li>Keine Beiträge vorhanden</li>
+          {% endif %}
+        </ul>
       </div>
     </div>
   </div>
