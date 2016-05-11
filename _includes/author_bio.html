@@ -1,0 +1,30 @@
+{% assign author = include.author %}
+<div class="row">
+  <div class="col-md-3">
+      <header class="post-header">
+        {% if author.picture %}<div class="author-picture"><img src="/img/authors/{{ author.picture   }}"></div>{% endif %}
+      </header>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-md-12">
+        {{ author.content }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"
+          {% if author.website %}
+          <ul class="unstyled">
+            {% if author.email %}
+            <li><i class="fa fa-envelope"></i> <a href="mailto:{{ author.email }}">{{ author.email  }}</a></li>
+            {% endif %}
+            {% if author.website %}
+            <li><i class="fa fa-user"></i> <a href="{{ author.website }}">{{ author.website | remove:   "http://" }}</a></li>
+            {% endif %}
+          </ul>
+          {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
