@@ -12,7 +12,8 @@ path: /blog/index.html
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         {{ post.excerpt }}
-        <br/>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Mehr <i class="fa fa-arrow-circle-o-right"></i></a>
+        <br/><br/>
       </li>
     {% endfor %}
   </ul>
@@ -25,7 +26,7 @@ path: /blog/index.html
     {% endif %}
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <li class="next"><a href="/" title="Neuere Beiträge">Neuere Beiträge →</a></li>
+        <li class="next"><a href="/blog/index.html" title="Neuere Beiträge">Neuere Beiträge →</a></li>
       {% else %}
         <li class="next"><a href="{{ paginator.previous_page_path }}" title="Neuere Beiträge">Neuere Beiträge →</a></li>
       {% endif %}
