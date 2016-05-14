@@ -5,8 +5,6 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
-twitter_username: jugessen
-github_username: jug-essen
 
 # Build settings
 markdown: kramdown
@@ -22,6 +20,9 @@ paginate_path: "/blog/page:num/"
 # Google analytics
 google_analytics_code: UA-77735068-1
 
+# social sharing
+twitter_username: jugessen
+github_username: jug-essen
 # Kommentarfunktion / Disqus
 disqus_username: jugessen
 disqus_domain: http://www.jug-essen.de
