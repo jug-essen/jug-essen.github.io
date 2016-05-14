@@ -3,12 +3,12 @@
 
   {% include head.html %}
 
-  <body>
-
+  <body class="body-blog">
+    {% include nav-default.html %}
     {% comment %}
     {% include header.html %}
     {% endcomment %}
-    
+
     {{content}}
 
     {% include footer.html %}

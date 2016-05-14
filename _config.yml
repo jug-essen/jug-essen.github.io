@@ -19,6 +19,9 @@ paginate: 5
 gems: [jekyll-paginate]
 paginate_path: "/blog/page:num/"
 
+# Google analytics
+google_analytics_code: UA-77735068-1
+
 # Collections
 collections:
   authors:

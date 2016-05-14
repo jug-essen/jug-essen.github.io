@@ -4,7 +4,7 @@ categories: blog
 author: richard.attermeyer
 ---
 Eine User Group lebt davon, dass sich viele Enthusiasten beteiligen.
-Dazu habt ihr verschiedene Möglichkeiten. Zum einen passiv als Teilnehmer von Vorträgen oder
+Dazu habt ihr verschiedene Möglichkeiten. Zum einen als Teilnehmer von Vorträgen oder
 Programmierabenden, Open Space, ...
 Viel besser ist es, ihr werdet selbst aktiv:
 
