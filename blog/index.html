@@ -2,7 +2,7 @@
 layout: blog
 path: /blog/index.html
 ---
-<h2>Aktuelle Blog Einträge</h2>
+<h2>Blog Beiträge</h2>
 <div class="home">
   <ul class="post-list">
     {% for post in paginator.posts %}
@@ -20,15 +20,15 @@ path: /blog/index.html
 </div>
 
 <nav id="pagination">
-  <ul class="pagination clearfix">
+  <ul class="pager">
     {% if paginator.next_page %}
-      <li class="prev"><a href="{{ paginator.next_page_path }}" title="Ältere Beiträge">← Ältere Beiträge</a></li>
+      <li class="next"><a href="{{ paginator.next_page_path }}" title="Ältere Beiträge">Ältere Beiträge &rarr;</a></li>
     {% endif %}
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <li class="next"><a href="/blog/index.html" title="Neuere Beiträge">Neuere Beiträge →</a></li>
+        <li class="previous"><a href="/blog/index.html" title="Neuere Beiträge">&larr; Neuere Beiträge</a></li>
       {% else %}
-        <li class="next"><a href="{{ paginator.previous_page_path }}" title="Neuere Beiträge">Neuere Beiträge →</a></li>
+        <li class="previous"><a href="{{ paginator.previous_page_path }}" title="Neuere Beiträge">&larr; Neuere Beiträge </a></li>
       {% endif %}
     {% endif %}
   </ul>
