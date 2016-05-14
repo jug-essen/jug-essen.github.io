@@ -42,4 +42,14 @@ layout: blog
     {{ content }}
   </div>
 
+  {% if site.disqus_username %}
+   <section>
+     <h3>Kommentare</h3>
+     <div id="comments">
+       {% include disqus_comments.html %}
+     </div>
+   </section>
+ {% endif %}
+
+
 </article>
