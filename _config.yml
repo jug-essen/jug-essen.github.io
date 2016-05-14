@@ -25,6 +25,7 @@ google_analytics_code: UA-77735068-1
 # Kommentarfunktion / Disqus
 disqus_username: jugessen
 disqus_domain: http://www.jug-essen.de
+sitemap_url: http://www.jug-essen.de
 
 # Collections
 collections:
