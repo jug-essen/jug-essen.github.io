@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Adresse</h2>
+      <a href="{{page.maps_url}}">
+        <address itemscope itemtype="http://schema.org/PostalAddress">
+          <strong>{{page.name}}</strong><br/>
+          <span itemprop="itemprop="streetAddress"">
+            {{page.address.street}}<br/>
+            {{page.address.city}}<br/>
+          </span>
+        </address>
+      </a>
+      {{ content }}
+    </div>
+  </div>
+</div>

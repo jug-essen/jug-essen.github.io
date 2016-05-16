@@ -30,6 +30,9 @@ sitemap_url: http://www.jug-essen.de
 
 # Collections
 collections:
+  locations:
+    output: true
+    permalink: /locations/:path/
   authors:
     output: true
     permalink: /authors/:path/

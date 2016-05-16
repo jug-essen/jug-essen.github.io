@@ -20,10 +20,11 @@
                   </thead>
                   <tbody>
                     {% for event in site.events limit:5%}
+                    {% assign loc = site.locations | where:"id",event.location | first %}
                     <tr itemscope itemtype="http://schema.org/Event">
                       <td itemprop="startDate" content="{{event.date}}">{% include date.html date=event.date %}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
-                      <td itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">{{event.location}}</span></td>
+                      <td itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name"><a href="{{"/locations/{{loc.id}" | prepend: site.baseurl | prepend: site.url}}}">{{loc.name}}</a></span></td>
                       <td>{% include author.html author_id=event.speaker %}</td>
                       <td>{{event.material_url}}</td>
                     </tr>

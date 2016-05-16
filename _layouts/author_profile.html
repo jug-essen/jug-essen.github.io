@@ -17,16 +17,11 @@ layout: default
     <div class="row">
       <div class="col-md-9 col-md-offset-3">
         <ul>
-          {% assign event_available = false %}
-          {% for event in site.events %}
-            {% for speaker in event.speakers %}
-              {% if speaker == author.username %}
-                {% assign event_available = true %}
-                <li><a href="{{ event.url | prepend: site.baseurl }}">{{ event.title }}</a> {% include date.html date=event.date %}</li>
-              {% endif %}
-            {% endfor %}
+          {% assign events = site.events | where_exp:"event","event.speakers contains author.username" %}
+          {% for event in events %}
+              <li><a href="{{ event.url | prepend: site.baseurl }}">{{ event.title }}</a>{% include date.html date=event.date %}</li>
           {% endfor %}
-          {% if event_available == false %}
+          {% if events.size == 0 %}
             <li>Keine Events vorhanden</li>
           {% endif %}
         </ul>
@@ -40,14 +35,11 @@ layout: default
     <div class="row">
       <div class="col-md-9 col-md-offset-3">
         <ul>
-          {% assign post_available = false %}
-          {% for post in site.posts %}
-            {% if post.author == author.username %}
-              {% assign post_available = true %}
+          {% assign posts = site.posts | where:"author",author.username %}
+          {% for post in posts %}
               <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> {% include date.html date=post.date %}</li>
-            {% endif %}
           {% endfor %}
-          {% if post_available == false %}
+          {% if posts.size == 0 %}
             <li>Keine Beiträge vorhanden</li>
           {% endif %}
         </ul>

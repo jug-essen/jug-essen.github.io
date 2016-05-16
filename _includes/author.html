@@ -1,10 +1,6 @@
 {% assign author_id = include.author_id %}
 {% if author_id %}
-  {% for author in site.authors %}
-    {% if author.username == author_id %}
-      {% assign current_author = author %}
-    {% endif %}
-  {% endfor %}
+  {% assign current_author=site.authors | where:"username",author_id | first %}
   {% if current_author %}
     <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ "/authors/" | prepend: site.baseurl | append: current_author.username }}">{{ current_author.title }}</a></span></span>
   {% else %}

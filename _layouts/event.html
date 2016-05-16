@@ -13,13 +13,25 @@ layout: default
       <h2>Sprecher</h2>
     </div>
   </div>
-  {% for author in site.authors %}
-    {% for speaker in page.speakers %}
-      {% if author.username == speaker %}
-        {% include author_bio.html author=author %}<br/>
-      {% endif %}
-    {% endfor %}
+  {% assign authors = site.authors | where_exp:"item","item.username in page.speakers" %}
+  {% for author in authors %}
+      {% include author_bio.html author=author %}<br/>
   {% endfor %}
-  {% if current_author %}
-  {% endif %}
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Adresse</h2>
+      {% assign loc = site.locations | where:"id",page.location | first %}
+      {% if loc %}
+        <address itemscope itemtype="http://schema.org/PostalAddress">
+          <a href="{{loc.url }}"><strong>{{loc.name}}</strong></a><br/>
+          <a href="{{loc.maps_url}}">
+              <span itemprop="itemprop="streetAddress"">
+            {{loc.address.street}}<br/>
+            {{loc.address.city}}<br/>
+          </a>
+          </span>
+        </address>
+      {% endif %}
+    </div>
+  </div>
 </div>
