@@ -21,7 +21,6 @@
                   <tbody>
                     {% for event in site.events limit:5%}
                     {% assign loc = site.locations | where:"id",event.location | first %}
-                    Loc: {{loc.id}}
                     <tr itemscope itemtype="http://schema.org/Event">
                       <td itemprop="startDate" content="{{event.date}}">{% include date.html date=event.date %}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
