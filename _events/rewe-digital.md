@@ -4,7 +4,6 @@ title: Microservices
 type: Vortrag
 speakers:
   - richard.attermeyer
-  - stefan.glase
 location: glaspavillon
 material_url:
 ---

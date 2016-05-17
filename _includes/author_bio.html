@@ -19,7 +19,7 @@
             <li><i class="fa fa-envelope"></i> <a href="mailto:{{ author.email }}">{{ author.email  }}</a></li>
             {% endif %}
             {% if author.website %}
-            <li><i class="fa fa-user"></i> <a href="{{ author.website }}">{{ author.website | remove:   "http://" }}</a></li>
+            <li><i class="fa fa-user"></i> <a href="{{ author.website }}">{{ author.website | remove: "http://" }}</a></li>
             {% endif %}
           </ul>
           {% endif %}

@@ -13,9 +13,10 @@ layout: default
       <h2>Sprecher</h2>
     </div>
   </div>
-  {% assign authors = site.authors | where_exp:"item","item.username in page.speakers" %}
-  {% for author in authors %}
+  {% for author in site.authors %}
+    {% if page.speakers contains author.username %}
       {% include author_bio.html author=author %}<br/>
+    {% endif %}
   {% endfor %}
   <div class="row">
     <div class="col-md-12">
