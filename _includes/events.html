@@ -13,9 +13,7 @@
                     <tr>
                       <td>Datum</td>
                       <td>Veranstaltung</td>
-                      <td>Ort</td>
-                      <td>Sprecher</td>
-                      <td>Folien</td>
+                      <td>Titel</td>
                     </tr>
                   </thead>
                   <tbody>
@@ -23,10 +21,8 @@
                     {% assign loc = site.locations | where:"id",event.location | first %}
                     <tr itemscope itemtype="http://schema.org/Event">
                       <td itemprop="startDate" content="{{event.date}}">{% include date.html date=event.date %}</td>
+                      <td>{{event.type}}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
-                      <td itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name"><a href="{{loc.url | prepend: site.baseurl | prepend: site.url }}">{{loc.name}}</a></span></td>
-                      <td>{% for speaker in event.speakers%}{% include author.html author_id=speaker %}{% if forloop.rindex0 > 0 %}/{% endif %}{% endfor %}</td>
-                      <td>{{event.material_url}}</td>
                     </tr>
                     {% endfor %}
                   </tbody>
