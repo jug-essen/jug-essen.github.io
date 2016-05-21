@@ -3,6 +3,7 @@ title: "Warum eine neue Java User Group in Essen"
 date: "2016-05-12"
 author: richard.attermeyer
 category: blog
+coverstory: true
 ---
 Anfang des Jahres haben sich im Rahmen der ruhrjug Leute zu einem Orgateam zusammengefunden, die sich für eine lebendige Weiterführung der ruhrjug interessieren.
 

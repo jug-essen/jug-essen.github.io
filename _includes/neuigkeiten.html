@@ -8,7 +8,8 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          {% for post in site.posts limit:3 %}
+          {% assign posts = site.posts | where: "coverstory","true" %}
+          {% for post in posts limit:2 %}
             <li>
               <span class="post-meta">{% include date.html date=post.date %}</span>
               <h2>
