@@ -1,14 +1,52 @@
-# Creative Theme for Jekyll
+# JUG Essen Blog
 
-A Jekyll implementation of the [Creative Theme](http://startbootstrap.com/template-overviews/creative/) template by [Start Bootstrap](http://startbootstrap.com).
+## Use Cases
 
-Creative is a one page Bootstrap theme for creatives, small businesses, and other multipurpose uses.
-The theme includes a number of rich features and plugins that you can use as a great boilerplate for your next Jekyll project! 
+# Einen Blog Post schreiben
 
+Erzeugt einfach einen neuen Blog Post in `_posts`. Dieser kann in Markdown geschrieben werden.
+Die Namenskonvention für die Blogposts seht ihr an den existierenden.
+Ihr solltet mindestens 2 Werte als Frontmatter eintragen.
+Frontmatter wird mit `---` begonnen und beendet.
+
+Die wichtigen Werte sind:
+
+* categories
+* author
+
+Der Autor sollte einem Eintrag in `_authors` entsprechen (entsprechend dem
+username Attribute im Frontmatter). Damit stellt ihr die Verknüpfung zur
+[Autorenseite](#Autorenseite) 
+
+## Autorenseite
+
+Unter `_authors` kann für jeden Sprecher / Autor / ... eine Autorenseite
+angelegt werden. Eine Autorenseite besteht aus strukturieten Attributen im
+Frontmatter und einem Freitext.
+
+* title
+  Name des Users
+* username
+  Identifizierender username. Konvention: vorname.nachname
+* email
+  Optional. Kann agegeben werden
+* website:
+  Optional. Eigene Webseite des Autors, Sprechers, ...
+* picture
+  Name des Autorenfotos. Ablegen unter `img/authors`.
+* social
+  twitter, github, stackovervflow, facebook, xing, lanyrd accounts des users.
+* topics
+  Yaml Liste der Themen, mit denen sich der Autor, User, ... beschäftigt
+
+## Events
+
+Um einen neuen Event anzulegen, muss unter `_events` ein neues "Event" angelegt
+werden.
+
+
+## Credits
+Dieser Blog nutzt das [Creative Theme](http://startbootstrap.com/template-overviews/creative/) template von [Start Bootstrap](http://startbootstrap.com).
 See it live in action at <https://volny.github.io/creative-theme-jekyll/>
 
-## To use the Creative Theme template in your project
-
-- Start by adding your info in `_config.yml`
-- In `_layouts/front.html` reorder or remove section as you prefer.
 
