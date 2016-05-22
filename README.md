@@ -44,6 +44,19 @@ Frontmatter und einem Freitext.
 Um einen neuen Event anzulegen, muss unter `_events` ein neues "Event" angelegt
 werden.
 
+## Titelstories
+
+Um einen Blog Post auf der Homepage zu zeigen, muss dieser im Frontmatter das
+Attribut `coverstory` auf true gesetzt bekommen:
+
+```
+---
+coverstory: true
+---
+```
+
+Dabei werden aber aktuell nicht mehr als 2 Coverstories angezeigt und zwar die
+neuesten zu erst.
 
 ## Credits
 Dieser Blog nutzt das [Creative Theme](http://startbootstrap.com/template-overviews/creative/) template von [Start Bootstrap](http://startbootstrap.com).
