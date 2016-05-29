@@ -1,2 +1,5 @@
 _site/
 .sass-cache/
+.idea
+.idea/
+jug-essen.github.io.iml
