@@ -21,7 +21,7 @@ paginate_path: "/blog/page:num/"
 google_analytics_code: UA-77735068-1
 
 # social sharing
-twitter_username: jugessen
+twitter_username: JUG_Essen
 github_username: jug-essen
 # Kommentarfunktion / Disqus
 disqus_username: jugessen
