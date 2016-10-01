@@ -13,7 +13,8 @@
           <div class="col-sm-3 col-sm-pull-9">
             <h3>Sponsoren</h3>
             Wir danken unseren Sponsoren
-            {% for sponsor in site.sponsors | sort: 'name' %}
+            {% assign site_sponsors = site.sponsors | sort: 'sort_key' %}
+            {% for sponsor in site_sponsors %}
             <a href="{{sponsor.url | prepend: site.baseurl | prepend: site.url}}">
               <img src="{{site.url}}{{site.baseurl}}/img/sponsors/{{sponsor.logo}}" class="img-responsive"></a>
                 <br/>
