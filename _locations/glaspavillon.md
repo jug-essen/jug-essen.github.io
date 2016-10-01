@@ -1,6 +1,6 @@
 ---
 layout: location
-id: glaspavillon
+key: glaspavillon
 name: Glaspavillon
 address:
   street: Universitätsstr. 12

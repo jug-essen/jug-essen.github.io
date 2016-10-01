@@ -8,7 +8,8 @@ permalink: /authors/
     <div class="col-md-12">
       <p>Auf dieser Seite möchten wir Ihnen unsere Sprecher und Autoren vorstellen:</p>
       <ul class="authors-list">
-        {% for author in site.authors | sort: 'title' %}
+        {% assign site_authors = site.authors | sort: 'title' %}
+        {% for author in site_authors %}
           <li><a class="authors-link" href="{{ author.url | prepend: site.baseurl }}">{{ author.title }}</a></li>
         {% endfor %}
       </ul>
