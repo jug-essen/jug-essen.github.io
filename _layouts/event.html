@@ -4,10 +4,11 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>Vortrag: {{page.title}} ({% include date.html date=page.date %})</h2>
+      <h2>{{page.title}} ({% include date.html date=page.date %})</h2>
       {{content}}
     </div>
   </div>
+  {% if page.speakers > 0 %}
   <div class="row">
     <div class="col-md-12">
       <h2>Sprecher</h2>
@@ -18,10 +19,11 @@ layout: default
       {% include author_bio.html author=author %}<br/>
     {% endif %}
   {% endfor %}
+  {% endif %}
   <div class="row">
     <div class="col-md-12">
       <h2>Adresse</h2>
-      {% assign loc = site.locations | where:"id",page.location | first %}
+      {% assign loc = site.locations | where:"key",page.location | first %}
       {% if loc %}
         <address itemscope itemtype="http://schema.org/PostalAddress">
           <a href="{{loc.url }}"><strong>{{loc.name}}</strong></a><br/>
@@ -33,6 +35,11 @@ layout: default
           </span>
         </address>
       {% endif %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="{{loc.maps_url}}">Anfahrt</a>
     </div>
   </div>
 </div>

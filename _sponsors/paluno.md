@@ -1,4 +1,5 @@
 ---
+sort_key: paluno
 name: Paluno - The Ruhr Institute of Technology
 website: https://paluno.uni-due.de
 logo: paluno.png

@@ -1,4 +1,5 @@
 ---
+sort_key: opitzconsulting
 name: OPITZ CONSULTING Deutschland GmbH
 website: http://www.opitz-consulting.de
 logo: opitz-consulting.png

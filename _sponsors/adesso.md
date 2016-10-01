@@ -1,4 +1,5 @@
 ---
+sort_key: adesso
 name: adesso
 website: http://www.adesso.de
 logo: adesso.png
