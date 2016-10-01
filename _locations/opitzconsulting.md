@@ -1,6 +1,6 @@
 ---
 layout: location
-id: opitzconsulting
+key: opitzconsulting
 name: >
   OPITZ CONSULTING Deutschland GmbH<br/>
   Standort Essen

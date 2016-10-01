@@ -23,7 +23,7 @@ layout: default
   <div class="row">
     <div class="col-md-12">
       <h2>Adresse</h2>
-      {% assign loc = site.locations | where:"id",page.location | first %}
+      {% assign loc = site.locations | where:"key",page.location | first %}
       {% if loc %}
         <address itemscope itemtype="http://schema.org/PostalAddress">
           <a href="{{loc.url }}"><strong>{{loc.name}}</strong></a><br/>
