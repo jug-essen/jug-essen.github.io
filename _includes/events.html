@@ -1,11 +1,8 @@
-<section class="bg-primary" id="about">
+ <section class="bg-primary" id="about">
   <div class="container events">
       <div class="row">
           <div class="col-lg-8 col-lg-offset-2 text-center">
               <h2 class="section-heading">Termine</h2
-                {% for event in site.events %}
-                Test
-                {% endfor %}
                 <hr class="light">
                 <table class="table">
                   <!-- todo define a collection and iterate over it -->
@@ -20,7 +17,7 @@
                     {% for event in site.events limit:5%}
                     {% assign loc = site.locations | where:"id",event.location | first %}
                     <tr itemscope itemtype="http://schema.org/Event">
-                      <td itemprop="startDate" content="{{event.date}}">{% include date.html date=event.date %}</td>
+                      <td itemprop="startDate" content="{{event.event_date}}"><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{% include date.html date=event.event_date %}</a></td>
                       <td>{{event.type}}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
                     </tr>
