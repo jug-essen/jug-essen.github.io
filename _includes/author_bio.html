@@ -19,7 +19,16 @@
             <li><i class="fa fa-envelope"></i> <a href="mailto:{{ author.email }}">{{ author.email  }}</a></li>
             {% endif %}
             {% if author.website %}
-            <li><i class="fa fa-user"></i> <a href="{{ author.website }}">{{ author.website | remove: "http://" }}</a></li>
+            <li><i class="fa fa-home"></i> <a href="{{ author.website }}">{{ author.website | remove: "http://" }}</a></li>
+            {% endif %}
+            {% if author.social.twitter %}
+            <li><i class="fa fa-twitter"></i> <a href="http://www.twitter.com/{{ author.social.twitter }}">{{ author.social.twitter}}</a></li>
+            {% endif %}
+            {% if author.social.github %}
+            <li><i class="fa fa-github"></i> <a href="http://www.github.com/{{ author.social.twitter }}">{{ author.social.github}}</a></li>
+            {% endif %}
+            {% if author.social.xing %}
+            <li><i class="fa fa-xing"></i> <a href="http://www.xing.com/{{ author.social.xing }}">{{ author.social.github}}</a></li>
             {% endif %}
           </ul>
           {% endif %}
