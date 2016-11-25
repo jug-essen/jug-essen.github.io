@@ -14,13 +14,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {% for event in site.events limit:5%}
+                    {% assign sorted_events = site.events | sort:"event_date" %}
+                    {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                    {% for event in sorted_events limit:5% | sort:"event_date" %}
+                    {% capture eventtime %}{{event.event_date | date: '%s'}}{% endcapture %}
                     {% assign loc = site.locations | where:"id",event.location | first %}
+                    {% if eventtime >= nowunix %}
                     <tr itemscope itemtype="http://schema.org/Event">
                       <td itemprop="startDate" content="{{event.event_date}}"><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{% include date.html date=event.event_date %}</a></td>
                       <td>{{event.type}}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
                     </tr>
+                    {% endif %}
                     {% endfor %}
                   </tbody>
                 </table>
