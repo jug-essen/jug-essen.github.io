@@ -1,7 +1,8 @@
 ---
 event_date: 2017-02-20
+opening_time: "18:30"
 title: "Softwarearchitektur­ Speed-Dating"
-type: Interaktiv
+type: Vortrag (Interaktiv)
 speakers:
 - stefan.zoerner
 location: opitzconsulting
