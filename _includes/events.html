@@ -1,7 +1,7 @@
  <section class="bg-primary" id="about">
   <div class="container events">
       <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 text-center">
+          <div class="col-lg-12 text-center">
               <h2 class="section-heading">Termine</h2
                 <hr class="light">
                 <table class="table">
@@ -9,18 +9,29 @@
                   <thead>
                     <tr>
                       <td>Datum / Anmeldung</td>
-                      <td>Veranstaltung</td>
+                      <td class="hidden-xs hidden-sm">Uhrzeit</td>
+                      <td class="hidden-xs hidden-sm">Veranstaltung</td>
                       <td>Titel</td>
+                      <td>Sprecher</td>
+                      <td class="hidden-xs hidden-sm">Ort</td>
                     </tr>
                   </thead>
                   <tbody>
-                    {% for event in site.events limit:5%}
+                    {% assign sorted_events = site.events | sort:"event_date" %}
+                    {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                    {% for event in sorted_events limit:5% | sort:"event_date" %}
+                    {% capture eventtime %}{{event.event_date | date: '%s'}}{% endcapture %}
                     {% assign loc = site.locations | where:"id",event.location | first %}
+                    {% if eventtime >= nowunix %}
                     <tr itemscope itemtype="http://schema.org/Event">
-                      <td itemprop="startDate" content="{{event.event_date}}"><a href="http://www.meetup.com/{{site.meetup_username}}/events/{{event.meetup_id}}">{% include date.html date=event.event_date %}</a></td>
-                      <td>{{event.type}}</td>
+                      <td itemprop="startDate" content="{{event.event_date}}">{% if event.meetup_id %}<a href="https://www.meetup.com/de-DE/JUG-Essen/events/{{event.meetup_id}}">{%else%}<a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{%endif%}{% include date.html date=event.event_date %}</a></td>
+                      <td class="hidden-xs hidden-sm">{% if event.opening_time %}{{event.opening_time}}{% else %}18:30{% endif %}</td>
+                      <td class="hidden-xs hidden-sm">{{event.type}}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
+                      <td>{% for author in site.authors %}{% if event.speakers contains author.username %}<a href="/authors/{{author.username}}"| prepend: site.baseurl | prepend: site.url}}">{{author.title}}</a>{% endif %}{% endfor %}</td>
+                      <td class="hidden-xs hidden-sm">{% for loc in site.locations %}{% if event.location == loc.key %}<a href="/locations/{{loc.key}}" | prepend: site.baseurl | prepend:   site.url}}">{{ loc.name }}</a>{% endif %}{% endfor %}</td>
                     </tr>
+                    {% endif %}
                     {% endfor %}
                   </tbody>
                 </table>
