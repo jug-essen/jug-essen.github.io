@@ -5,6 +5,7 @@ type: Vortrag
 speakers:
 - stefan.armbruster
 location: opitzconsulting
+meetup_id: 235605321
 material_url:
 ---
 Im Frühjahr 2016 wurden in der Presse die ersten Berichte zu den
