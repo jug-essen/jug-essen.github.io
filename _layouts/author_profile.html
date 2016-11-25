@@ -19,7 +19,7 @@ layout: default
         <ul>
           {% assign events = site.events | where_exp:"event","event.speakers contains author.username" %}
           {% for event in events %}
-              <li><a href="{{ event.url | prepend: site.baseurl }}">{{ event.title }}</a>{% include date.html date=event.date %}</li>
+              <li><a href="{{ event.url | prepend: site.baseurl }}">{{ event.title }}</a>, {% include date.html date=event.event_date %}</li>
           {% endfor %}
           {% if events.size == 0 %}
             <li>Keine Events vorhanden</li>
