@@ -8,7 +8,7 @@
                   <!-- todo define a collection and iterate over it -->
                   <thead>
                     <tr>
-                      <td>Datum</td>
+                      <td>Datum / Anmeldung</td>
                       <td>Veranstaltung</td>
                       <td>Titel</td>
                     </tr>
@@ -17,7 +17,7 @@
                     {% for event in site.events limit:5%}
                     {% assign loc = site.locations | where:"id",event.location | first %}
                     <tr itemscope itemtype="http://schema.org/Event">
-                      <td itemprop="startDate" content="{{event.event_date}}"><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{% include date.html date=event.event_date %}</a></td>
+                      <td itemprop="startDate" content="{{event.event_date}}"><a href="http://www.meetup.com/{{site.meetup_username}}/events/{{event.meetup_id}}">{% include date.html date=event.event_date %}</a></td>
                       <td>{{event.type}}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
                     </tr>
