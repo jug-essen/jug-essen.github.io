@@ -8,7 +8,7 @@
                   <!-- todo define a collection and iterate over it -->
                   <thead>
                     <tr>
-                      <td>Datum</td>
+                      <td>Datum / Anmeldung</td>
                       <td class="hidden-xs hidden-sm">Uhrzeit</td>
                       <td class="hidden-xs hidden-sm">Veranstaltung</td>
                       <td>Titel</td>
@@ -24,12 +24,12 @@
                     {% assign loc = site.locations | where:"id",event.location | first %}
                     {% if eventtime >= nowunix %}
                     <tr itemscope itemtype="http://schema.org/Event">
-                      <td itemprop="startDate" content="{{event.event_date}}"><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{% include date.html date=event.event_date %}</a></td>
+                      <td itemprop="startDate" content="{{event.event_date}}">{% if event.meetup_id %}<a href="https://www.meetup.com/de-DE/JUG-Essen/events/{{event.meetup_id}}">{%else%}<a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{%endif%}{% include date.html date=event.event_date %}</a></td>
                       <td class="hidden-xs hidden-sm">{% if event.opening_time %}{{event.opening_time}}{% else %}18:30{% endif %}</td>
                       <td class="hidden-xs hidden-sm">{{event.type}}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
                       <td>{% for author in site.authors %}{% if event.speakers contains author.username %}<a href="/authors/{{author.username}}"| prepend: site.baseurl | prepend: site.url}}">{{author.title}}</a>{% endif %}{% endfor %}</td>
-                      <td class="hidden-xs hidden-sm">{% for loc in site.locations %}{% if event.location == loc.key %}{{ loc.name }}{% endif %}{% endfor %}</td>
+                      <td class="hidden-xs hidden-sm">{% for loc in site.locations %}{% if event.location == loc.key %}<a href="/locations/{{loc.key}}" | prepend: site.baseurl | prepend:   site.url}}">{{ loc.name }}</a>{% endif %}{% endfor %}</td>
                     </tr>
                     {% endif %}
                     {% endfor %}
