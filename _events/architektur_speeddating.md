@@ -6,6 +6,7 @@ type: Vortrag (Interaktiv)
 speakers:
 - stefan.zoerner
 location: opitzconsulting
+meetup_id: 235867042
 material_url:
 ---
 Zeitgemäße Softwarearchitektur ist nicht das Werk einzelner. Architekturansätze und Ideen entstehen im Team und werden gemeinsam reflektiert. Alle Entwickler müssen sie zumindest verstehen und mittragen können. Aber was genau müsst Ihr vermitteln? Reicht aufschreiben? Hilft UML?
