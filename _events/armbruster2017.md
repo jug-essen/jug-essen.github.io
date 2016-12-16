@@ -1,5 +1,5 @@
 ---
-event_date: 2017-01-10
+event_date: 2017-01-11
 title: "Graphdatenbanken und die Panama Papers"
 type: Vortrag
 speakers:
@@ -8,6 +8,8 @@ location: opitzconsulting
 meetup_id: 235605321
 material_url:
 ---
+**Achtung [Terminverschiebung](/blog/2016/12/16/terminverschiebung)** vom 10.01.2017 auf den **11.01.2017**.
+
 Im Frühjahr 2016 wurden in der Presse die ersten Berichte zu den
 "Panama Papers" veröffentlicht. Mit knapp 3 TB an Rohdaten war dies
 das bisher mit Abstand größte Leak an Daten weltweit. Der Vortrag gibt
