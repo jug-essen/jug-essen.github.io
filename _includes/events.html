@@ -28,8 +28,8 @@
                       <td class="hidden-xs hidden-sm">{% if event.opening_time %}{{event.opening_time}}{% else %}18:30{% endif %}</td>
                       <td class="hidden-xs hidden-sm">{{event.type}}</td>
                       <td><a href="{{event.url | prepend: site.baseurl | prepend:   site.url}}">{{event.title}}</a></td>
-                      <td>{% for author in site.authors %}{% if event.speakers contains author.username %}<a href="/authors/{{author.username}}"| prepend: site.baseurl | prepend: site.url}}">{{author.title}}</a>{% endif %}{% endfor %}</td>
-                      <td class="hidden-xs hidden-sm">{% for loc in site.locations %}{% if event.location == loc.key %}<a href="/locations/{{loc.key}}" | prepend: site.baseurl | prepend:   site.url}}">{{ loc.name }}</a>{% endif %}{% endfor %}</td>
+                      <td>{% for author in site.authors %}{% if event.speakers contains author.username %}<a href="/authors/{{author.username}}| prepend: site.baseurl | prepend: site.url}}">{{author.title}}</a>{% endif %}{% endfor %}</td>
+                      <td class="hidden-xs hidden-sm">{% for loc in site.locations %}{% if event.location == loc.key %}<a href="/locations/{{loc.key}} | prepend: site.baseurl | prepend:   site.url}}">{{ loc.name }}</a>{% endif %}{% endfor %}</td>
                     </tr>
                     {% endif %}
                     {% endfor %}
