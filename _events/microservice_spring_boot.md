@@ -5,6 +5,7 @@ type: Vortrag
 speakers:
 - eberhard.wolff
 location: tbd
+meetup_id: 236958568
 material_url:
 ---
 Microservices stellen Entwickler vor neue Herausforderungen. Der
