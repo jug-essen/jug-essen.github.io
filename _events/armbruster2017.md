@@ -6,7 +6,7 @@ speakers:
 - stefan.armbruster
 location: opitzconsulting
 meetup_id: 235605321
-material_url:
+material_url: https://docs.google.com/presentation/d/1fSRq7x9N0_uOP_uiTEahuPoai3j_gPiwdSNla_JL_Xk/edit?ts=58775383
 ---
 **Achtung [Terminverschiebung](/blog/2016/12/16/terminverschiebung)** vom 10.01.2017 auf den **11.01.2017**.
 
