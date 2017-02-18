@@ -10,12 +10,12 @@ maps_url: https://www.google.com/maps/place/Zugang+Gebäude+R12,+Gladbecker+Str.
 ## Beschreibung
 Die Universität Essen stellt uns für einige unserer Veranstaltungen den Glaspavillon kostenlos zur Verfügung. Vielen Dank dafür!
 
-Der Glaspavillon befindet an der Ecke Universitätsstraße/Gladbecker Straße. Davor steht ein großer Brunnen. Der Name klingt etwas sehr romantisch; es handelt sich um den großen Vortragssaal im Erdgeschoss des Gebäudes, der abereine große Fensterfassade hat. Die Anschrift ist Universitätsstr.12.
+Der Glaspavillon befindet an der Ecke Universitätsstraße/Gladbecker Straße. Davor steht ein großer Brunnen. Der Name klingt etwas sehr romantisch; es handelt sich um den großen Vortragssaal im Erdgeschoss des Gebäudes, der aber eine große Fensterfassade hat. Die Anschrift ist Universitätsstr.12.
 
 ## Anfahrt
 
 ### Mit der U- oder Straßenbahn
-Die Haltestelle Rheinischer Platz ist 2 Minuten vom vom Glaspavillon der Uni Essen entfernt entfernt. Dort halten die Straßenbahnlinien 101, 103, 105 und 109.
+Die Haltestelle Rheinischer Platz ist 2 Minuten vom Glaspavillon der Uni Essen entfernt. Dort halten die Straßenbahnlinien 101, 103, 105 und 109.
 
 ### Mit dem Auto
 Parkmöglichkeiten findet man auf den Parkplätzen des Uni-Campus sowie einigen nahegelegenen Parkhäusern, z.B. das Parkhaus am Weberplatz (Einfahrt bis 20 Uhr, Ausfahrt jederzeit, auch nachts).
