@@ -4,7 +4,7 @@ title: "Microservice mit Spring Boot und Spring Cloud"
 type: Vortrag
 speakers:
 - eberhard.wolff
-location: tbd
+location: hoersaal_S05_T00_B59
 meetup_id: 236958568
 material_url:
 ---
