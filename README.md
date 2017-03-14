@@ -13,7 +13,7 @@ Die wichtigen Werte sind:
 
 * categories
 * author
-
+ 
 Der Autor sollte einem Eintrag in `_authors` entsprechen (entsprechend dem
 username Attribute im Frontmatter). Damit stellt ihr die Verknüpfung zur
 [Autorenseite](#Autorenseite) 
@@ -56,7 +56,7 @@ coverstory: true
 ```
 
 Dabei werden aber aktuell nicht mehr als 2 Coverstories angezeigt und zwar die
-neuesten zu erst.
+neuesten zuerst.
 
 ## Credits
 Dieser Blog nutzt das [Creative Theme](http://startbootstrap.com/template-overviews/creative/) template von [Start Bootstrap](http://startbootstrap.com).
