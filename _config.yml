@@ -14,7 +14,7 @@ permalink: /blog/:year/:month/:day/:title
 
 # Pagination
 paginate: 5
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate_path: "/blog/page:num/"
 
 # Google analytics
