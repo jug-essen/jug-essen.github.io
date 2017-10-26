@@ -4,7 +4,7 @@ title: "Orchestrierung von Microservices"
 type: Vortrag
 speakers:
 - bernd.ruecker
-location: opitzconsulting
+location: glaspavillon
 meetup_id: 243167834
 material_url:
 ---
