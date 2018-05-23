@@ -18,7 +18,7 @@ gems: [jekyll-paginate]
 paginate_path: "/blog/page:num/"
 
 # Google analytics
-google_analytics_code: UA-77735068-1
+# google_analytics_code: UA-77735068-1
 
 # social sharing
 twitter_username: JUG_Essen
