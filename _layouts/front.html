@@ -4,14 +4,20 @@
 {% include head.html %}
 
 <body id="page-top">
+  {% comment %}
   {% include nav.html %}
+  {% endcomment %}
   {% include header.html %}
+  {% comment %}
   {% include events.html %}
   {% include neuigkeiten.html %}
   {% include angebot.html %}
   {% include kontakt.html %}
   {% include scripts.html %}
+  {% endcomment %}
   {% include footer.html %}
 </body>
+<!--
 {% include disqus_commentcount.html %}
+-->
 </html>

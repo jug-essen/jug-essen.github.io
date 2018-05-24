@@ -20,15 +20,15 @@ plugins:
 paginate_path: "/blog/page:num/"
 
 # Google analytics
-google_analytics_code: UA-77735068-1
+# google_analytics_code: UA-77735068-1
 
 # social sharing
 twitter_username: JUG_Essen
 meetup_username: JUG-Essen
 github_username: jug-essen
 # Kommentarfunktion / Disqus
-disqus_username: jugessen
-disqus_domain: http://www.jug-essen.de
+#disqus_username: jugessen
+#disqus_domain: http://www.jug-essen.de
 sitemap_url: http://www.jug-essen.de
 
 # Collections
