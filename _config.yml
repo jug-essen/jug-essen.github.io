@@ -27,8 +27,8 @@ twitter_username: JUG_Essen
 meetup_username: JUG-Essen
 github_username: jug-essen
 # Kommentarfunktion / Disqus
-disqus_username: jugessen
-disqus_domain: http://www.jug-essen.de
+#disqus_username: jugessen
+#disqus_domain: http://www.jug-essen.de
 sitemap_url: http://www.jug-essen.de
 
 # Collections
